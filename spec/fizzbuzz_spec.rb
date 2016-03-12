@@ -48,5 +48,9 @@ describe FizzBuzz do
     it '#solve は1から100までの数値をFizzBuzz として処理する' do
       expect(subject.solve).to eq FizzBuzzAnswer
     end
+
+    it '#solve は処理結果として配列を返す' do
+      expect(subject.solve).to be_a Array
+    end
   end
 end
