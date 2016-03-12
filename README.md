@@ -34,13 +34,13 @@
 
 ### バージョンの確認
 
-```
+```shell
 ruby -v # => ruby 2.3.0
 ```
 
 ## Gem のインストール
 
-```
+```shell
 bundle install
 ```
 
@@ -48,7 +48,7 @@ bundle install
 
 RSpec によるテストを試しに実行して、動作を確認する
 
-```
+```shell
 rpsec
 ```
 
@@ -56,7 +56,7 @@ rpsec
 
 Guard, Guard RSpec で、テストを継続的に実行する
 
-```
+```shell
 guard
 ```
 
