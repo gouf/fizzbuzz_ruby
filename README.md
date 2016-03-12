@@ -4,6 +4,8 @@
 
 [Fizz Buzz - Wikipedia](https://ja.wikipedia.org/wiki/Fizz_Buzz)
 
+これをプログラムとして、1 から100 までの数値を処理してみよう
+
 # ディレクトリ・ファイル構成
 
 ```
