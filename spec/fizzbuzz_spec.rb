@@ -52,5 +52,10 @@ describe FizzBuzz do
     it '#solve は処理結果として配列を返す' do
       expect(subject.solve).to be_a Array
     end
+
+    it '#solve は処理対象外の数値はそのまま数値を返す' do
+      expect(subject.solve.first).to be_a Numeric
+      expect(subject.solve.first).not_to be_a String
+    end
   end
 end
