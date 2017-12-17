@@ -20,10 +20,9 @@
 ├── spec
 │   ├── fizzbuzz_spec.rb
 │   └── spec_helper.rb
-├── tmp
-└── tree.txt
+└── tmp
 
-3 directories, 9 files
+3 directories, 8 files
 ```
 
 # 準備
