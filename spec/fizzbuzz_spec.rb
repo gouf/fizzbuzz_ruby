@@ -13,49 +13,55 @@ describe FizzBuzz do
   end
 
   context 'メソッド動作のチェック' do
-    it '#fizz?(3) はtrue を返す' do
-      expect(subject.fizz?(3)).to be_truthy
+    context '#fizz? は' do
+      it '3を渡されたとき true を返す' do
+        expect(subject.fizz?(3)).to be_truthy
+      end
+
+      it '5を渡されたとき false を返す' do
+        expect(subject.fizz?(5)).to be_falsey
+      end
     end
 
-    it '#fizz?(5) はfalse を返す' do
-      expect(subject.fizz?(5)).to be_falsey
-    end
+    context '#buzz? は' do
+      it '5を渡されたときtrue を返す' do
+        expect(subject.buzz?(5)).to be_truthy
+      end
 
-    it '#buzz?(5) はtrue を返す' do
-      expect(subject.buzz?(5)).to be_truthy
-    end
-
-    it '#buzz?(3) はfalse を返す' do
-      expect(subject.buzz?(3)).to be_falsey
+      it '3を渡されたときfalse を返す' do
+        expect(subject.buzz?(3)).to be_falsey
+      end
     end
 
     it '#fizz_buzz?(15) はtrue を返す' do
       expect(subject.fizz_buzz?(15)).to be_truthy
     end
 
-    it '#solve は3の倍数の数値をFizz に変換する' do
-      expect(subject.solve.at(2)).to eq 'Fizz'
-    end
+    context '#solve は' do
+      it '3の倍数の数値をFizz に変換する' do
+        expect(subject.solve.at(2)).to eq 'Fizz'
+      end
 
-    it '#solve は5の倍数の数値をBuzz に変換する' do
-      expect(subject.solve.at(4)).to eq 'Buzz'
-    end
+      it '5の倍数の数値をBuzz に変換する' do
+        expect(subject.solve.at(4)).to eq 'Buzz'
+      end
 
-    it '#solve は15の倍数の数値をFizzBuzz に変換する' do
-      expect(subject.solve.at(14)).to eq 'FizzBuzz'
-    end
+      it '15の倍数の数値をFizzBuzz に変換する' do
+        expect(subject.solve.at(14)).to eq 'FizzBuzz'
+      end
 
-    it '#solve は1から100までの数値をFizzBuzz として処理する' do
-      expect(subject.solve).to eq FizzBuzzAnswer
-    end
+      it '1から100までの数値をFizzBuzz として処理する' do
+        expect(subject.solve).to eq FizzBuzzAnswer
+      end
 
-    it '#solve は処理結果として配列を返す' do
-      expect(subject.solve).to be_a Array
-    end
+      it '処理結果として配列を返す' do
+        expect(subject.solve).to be_a Array
+      end
 
-    it '#solve は処理対象外の数値はそのまま数値を返す' do
-      expect(subject.solve.first).to be_a Numeric
-      expect(subject.solve.first).not_to be_a String
+      it '処理対象外の数値はそのまま数値を返す' do
+        expect(subject.solve.first).to be_a Numeric
+        expect(subject.solve.first).not_to be_a String
+      end
     end
   end
 end
